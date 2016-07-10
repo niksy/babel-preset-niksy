@@ -1,0 +1,44 @@
+{
+  "name": "babel-preset-niksy",
+  "version": "0.0.0",
+  "description": "Babel preset for my projects.",
+  "main": "index.js",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint {index,test/index}.js && mocha test/index.js"
+  },
+  "dependencies": {
+    "babel-plugin-check-es2015-constants": "^6.8.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.8.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.10.1",
+    "babel-plugin-transform-es2015-template-literals": "^6.8.0",
+    "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+    "babel-plugin-transform-es3-property-literals": "^6.8.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.10.4",
+    "eslint": "^2.13.1",
+    "eslint-config-niksy": "^2.1.0",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "babel",
+    "niksy",
+    "preset"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/babel-preset-niksy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/babel-preset-niksy/issues"
+  },
+  "homepage": "https://github.com/niksy/babel-preset-niksy#readme"
+}
