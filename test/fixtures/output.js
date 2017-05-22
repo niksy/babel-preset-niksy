@@ -8,15 +8,15 @@ function tucker() {
 
 	var ella = {
 		athena: athena,
-		rex: function () {
+		rex: function rex() {
 			return 'rex';
 		},
 
-		finn: function () {
+		finn: function finn() {
 			var jackie = 'jackie benji c ' + String(d) + ' e';
 			console.log(_this.tucker);
 		},
-		'catch': function () {}
+		'catch': function _catch() {}
 	};
 	ella['catch'] = function () {};
 }
