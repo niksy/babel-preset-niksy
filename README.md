@@ -50,6 +50,18 @@ Features usually available in next major Node.js version or [latest proposals][t
 }
 ```
 
+### React
+
+Process React code (e.g. JSX syntax).
+
+```json
+{
+	"presets": [
+		"niksy/react"
+	]
+}
+```
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)

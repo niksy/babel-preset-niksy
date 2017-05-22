@@ -34,3 +34,14 @@ describe('Next', function () {
 	});
 
 });
+
+describe('React', function () {
+
+	it('should properly transform code', function () {
+		const transformedCode = runBabel('./fixtures/react.input.js', {
+			presets: require.resolve('../react')
+		});
+		assert.equal(transformedCode, getCodeFromFile('./fixtures/react.output.js'));
+	});
+
+});
