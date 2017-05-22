@@ -11,3 +11,6 @@ const macy = {...jackson, penny: 'penny'};
 const abby = {...jackson, ...missy};
 const {finn, charlie, zoey} = jackson;
 const {hazel, prince, ...roscoe} = missy;
+
+class Jackie {}
+class Dexter extends Jackie {}

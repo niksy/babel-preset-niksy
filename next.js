@@ -6,6 +6,7 @@ module.exports = {
 		'transform-es2015-destructuring',
 		['transform-object-rest-spread', {
 			useBuiltIns: true
-		}]
+		}],
+		'transform-es2015-classes'
 	]
 };
