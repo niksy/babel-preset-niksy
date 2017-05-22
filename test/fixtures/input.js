@@ -1,14 +1,14 @@
-let a = 1;
-const b = 2;
-b = 3;
+let jackie = 1;
+const benji = 2;
+benji = 3;
 
-function foo () {
-	var bar = {
-		bad: () => {
-			var a = `a b c ${d} e`;
-			console.log(this.foo);
+function tucker () {
+	var ella = {
+		finn: () => {
+			var jackie = `jackie benji c ${d} e`;
+			console.log(this.tucker);
 		},
 		catch: function () {}
 	};
-	bar.catch = function () {};
+	ella.catch = function () {};
 }

@@ -1,16 +1,16 @@
-var a = 1;
-var b = 2;
-b = 3;
+var jackie = 1;
+var benji = 2;
+benji = 3;
 
-function foo() {
+function tucker() {
 	var _this = this;
 
-	var bar = {
-		bad: function () {
-			var a = "a b c " + String(d) + " e";
-			console.log(_this.foo);
+	var ella = {
+		finn: function () {
+			var jackie = "jackie benji c " + String(d) + " e";
+			console.log(_this.tucker);
 		},
 		"catch": function () {}
 	};
-	bar["catch"] = function () {};
+	ella["catch"] = function () {};
 }
