@@ -23,3 +23,14 @@ describe('Basic', function () {
 	});
 
 });
+
+describe('Next', function () {
+
+	it('should properly transform code', function () {
+		const transformedCode = runBabel('./fixtures/next.input.js', {
+			presets: require.resolve('../next')
+		});
+		assert.equal(transformedCode, getCodeFromFile('./fixtures/next.output.js'));
+	});
+
+});
