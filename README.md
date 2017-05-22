@@ -27,5 +27,5 @@ Add this config to your `.babelrc`:
 MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/babel-preset-niksy
-[ci-img]: https://img.shields.io/travis/niksy/babel-preset-niksy.svg
+[ci-img]: https://travis-ci.org/niksy/babel-preset-niksy.svg?branch=master
 [babel]: http://babeljs.io/
