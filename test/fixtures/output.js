@@ -4,7 +4,8 @@ benji = 3;
 var athena = 4;
 
 function tucker() {
-	var _this = this;
+	var _this = this,
+	    _annie;
 
 	var ella = {
 		athena: athena,
@@ -19,4 +20,5 @@ function tucker() {
 		'catch': function _catch() {}
 	};
 	ella['catch'] = function () {};
+	var annie = (_annie = {}, _annie['shelby' + athena] = athena, _annie);
 }

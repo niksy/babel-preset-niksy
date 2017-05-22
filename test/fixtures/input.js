@@ -16,4 +16,7 @@ function tucker () {
 		catch: function () {}
 	};
 	ella.catch = function () {};
+	var annie = {
+		[`shelby${athena}`]: athena
+	};
 }
