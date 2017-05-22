@@ -45,3 +45,14 @@ describe('React', function () {
 	});
 
 });
+
+describe('Vue', function () {
+
+	it('should properly transform code', function () {
+		const transformedCode = runBabel('./fixtures/vue.input.js', {
+			presets: require.resolve('../vue')
+		});
+		assert.equal(transformedCode, getCodeFromFile('./fixtures/vue.output.js'));
+	});
+
+});

@@ -62,6 +62,18 @@ Process React code (e.g. JSX syntax).
 }
 ```
 
+### Vue
+
+Process Vue code (e.g. code with JSX syntax).
+
+```json
+{
+	"presets": [
+		"niksy/vue"
+	]
+}
+```
+
 ## License
 
 MIT © [Ivan Nikolić](http://ivannikolic.com)
