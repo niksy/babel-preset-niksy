@@ -10,6 +10,7 @@ module.exports = {
 		}],
 		require('babel-plugin-transform-es2015-block-scoping'),
 		require('babel-plugin-check-es2015-constants'),
+		require('babel-plugin-transform-es2015-shorthand-properties'),
 
 		require('babel-plugin-transform-es3-member-expression-literals'),
 		require('babel-plugin-transform-es3-property-literals')
