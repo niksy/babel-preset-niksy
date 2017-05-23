@@ -22,12 +22,7 @@ Add this config to your `.babelrc`:
 }
 ```
 
-## Presets
-
-In addition to default preset, there are also specific presets. You can apply
-multiple presets with [Babel `presets` option][babel-presets].
-
-**It’s highly recommended to apply default preset:**
+If you’re using [presets](#presets), **it’s highly recommended to apply default preset:**
 
 ```json
 {
@@ -37,6 +32,11 @@ multiple presets with [Babel `presets` option][babel-presets].
 	]
 }
 ```
+
+## Presets
+
+In addition to default preset, there are also specific presets. You can apply
+multiple presets with [Babel `presets` option][babel-presets].
 
 ### Next
 
