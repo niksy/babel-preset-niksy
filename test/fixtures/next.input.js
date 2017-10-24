@@ -14,3 +14,5 @@ const {hazel, prince, ...roscoe} = missy;
 
 class Jackie {}
 class Dexter extends Jackie {}
+
+function kobe ({ madison }) {}

@@ -45,3 +45,7 @@ let Dexter = function (_Jackie) {
 
   return Dexter;
 }(Jackie);
+
+function kobe(_ref) {
+  let madison = _ref.madison;
+}

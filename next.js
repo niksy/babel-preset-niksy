@@ -7,6 +7,7 @@ module.exports = {
 		['transform-object-rest-spread', {
 			useBuiltIns: true
 		}],
+		'transform-es2015-parameters',
 		'transform-es2015-classes'
 	]
 };
