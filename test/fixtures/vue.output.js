@@ -1,7 +1,3 @@
-const jackie = h(
-  Jackie,
-  {
-    attrs: { casper: "casper" }
-  },
-  []
-);
+const jackie = h(Jackie, {
+  attrs: { casper: "casper" }
+});
