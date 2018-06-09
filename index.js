@@ -1,8 +1,9 @@
 'use strict';
 
-module.exports = {
-	presets: [
-		['env', {
+module.exports = ( context, passedOptions ) => {
+
+	const options = {
+		'preset-env': {
 			targets: {
 				node: '4',
 				browsers: [
@@ -16,16 +17,36 @@ module.exports = {
 				// We want to use spec-compliant variant
 				'transform-es2015-template-literals'
 			]
-		}]
-	],
-	plugins: [
+		}
+	};
 
-		// We want to use spec-compliant variant
-		['transform-es2015-template-literals', {
-			spec: true
-		}],
+	if (
+		typeof passedOptions !== 'undefined' &&
+		('preset-env' in passedOptions)
+	) {
+		options['preset-env'] = Object.assign({}, options['preset-env'], passedOptions['preset-env']);
+	}
 
-		'transform-es3-member-expression-literals',
-		'transform-es3-property-literals'
-	]
+	return {
+		presets: [
+			[
+				'env',
+				options['preset-env']
+			]
+		],
+		plugins: [
+
+			// We want to use spec-compliant variant
+			[
+				'transform-es2015-template-literals',
+				{
+					spec: true
+				}
+			],
+
+			'transform-es3-member-expression-literals',
+			'transform-es3-property-literals'
+		]
+	};
+
 };

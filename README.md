@@ -33,6 +33,26 @@ If you’re using [presets](#presets), **it’s highly recommended to apply defa
 }
 ```
 
+## Options
+
+You can pass additional options to default preset.
+
+```json
+{
+	"presets": [
+		["niksy", {
+			// Additional options
+		}]
+	]
+}
+```
+
+### `preset-env`
+
+Type: `Object`
+
+Options for [`babel-preset-env`][babel-preset-env].
+
 ## Presets
 
 In addition to default preset, there are also specific presets. You can apply
@@ -80,6 +100,7 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/babel-preset-niksy
 [ci-img]: https://travis-ci.org/niksy/babel-preset-niksy.svg?branch=master
-[babel]: http://babeljs.io/
-[babel-presets]: https://babeljs.io/docs/plugins/#plugin-preset-ordering
+[babel]: https://new.babeljs.io/
+[babel-presets]: https://new.babeljs.io/docs/en/plugins.html#plugin-preset-ordering
 [tc39-proposals]: https://github.com/tc39/proposals#active-proposals
+[babel-preset-env]: https://new.babeljs.io/docs/en/babel-preset-env.html#options
