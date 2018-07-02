@@ -12,11 +12,7 @@ module.exports = ( context, passedOptions ) => {
 				]
 			},
 			loose: true,
-			modules: false,
-			exclude: [
-				// We want to use spec-compliant variant
-				'transform-es2015-template-literals'
-			]
+			modules: false
 		}
 	};
 
@@ -35,15 +31,6 @@ module.exports = ( context, passedOptions ) => {
 			]
 		],
 		plugins: [
-
-			// We want to use spec-compliant variant
-			[
-				'transform-es2015-template-literals',
-				{
-					spec: true
-				}
-			],
-
 			'transform-es3-member-expression-literals',
 			'transform-es3-property-literals'
 		]

@@ -21,7 +21,7 @@ function tucker() {
 		},
 
 		finn: function finn() {
-			var jackie = 'jackie benji c ' + String(d) + ' e';
+			var jackie = 'jackie benji c ' + d + ' e';
 			console.log(_this.tucker);
 		},
 		'catch': function _catch() {}
