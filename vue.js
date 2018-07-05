@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = {
-	presets: [
-		'vue'
+	plugins: [
+		'syntax-jsx',
+		'transform-vue-jsx'
 	]
 };
