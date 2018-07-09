@@ -33,8 +33,9 @@
   "devDependencies": {
     "babel-core": "^6.10.4",
     "eslint": "^4.19.1",
-    "eslint-config-niksy": "^5.0.0",
+    "eslint-config-niksy": "^5.2.1",
     "eslint-plugin-extend": "^0.1.1",
+    "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-mocha": "^4.9.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
