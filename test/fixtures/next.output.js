@@ -7,5 +7,3 @@ const abby = Object.assign({}, jackson, missy);
 const { finn, charlie, zoey } = jackson;
 const { hazel, prince } = missy,
       roscoe = _objectWithoutProperties(missy, ['hazel', 'prince']);
-
-import('jackie').then(jackie => jackie);
