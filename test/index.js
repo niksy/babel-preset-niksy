@@ -3,101 +3,113 @@
 const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
-const babel = require('babel-core');
+const pify = require('pify');
+const babel = require('@babel/core');
 
 function getCodeFromFile ( file ) {
-	return fs.readFileSync(path.join(__dirname, file), 'utf8');
+	return pify(fs.readFile)(path.join(__dirname, file), 'utf8');
 }
 
-function runBabel ( file, config, cb ) {
-	return babel.transformFile(path.join(__dirname, file), config, function ( err, result ) {
-		if ( err ) {
-			throw err;
-		}
-		cb(`${result.code}\n`);
-	});
+function runBabel ( file, config ) {
+	return pify(babel.transformFile)(path.join(__dirname, file), config)
+		.then(( result ) => `${result.code}\n`);
 }
 
 describe('Basic', function () {
 
-	if ( /^4\./.test(process.versions.node) ) {
-		// Node 4 has sometimes racing condition problems with babel-preset-env
-		this.timeout(5000);
-	}
+	it('should properly transform code', function () {
 
-	it('should properly transform code', function ( done ) {
-		runBabel('./fixtures/basic.input.js', {
-			presets: [require.resolve('../')]
-		}, function ( transformedCode ) {
-			assert.equal(transformedCode, getCodeFromFile('./fixtures/basic.output.js'));
-			done();
-		});
+		return Promise.all([
+			runBabel('./fixtures/basic.input.js', {
+				presets: [require.resolve('../')]
+			}),
+			getCodeFromFile('./fixtures/basic.output.js')
+		])
+			.then(([ transformedCode, fixture ]) => {
+				assert.equal(transformedCode, fixture);
+			});
+
 	});
 
 });
 
 describe('Basic, options', function () {
 
-	if ( /^4\./.test(process.versions.node) ) {
-		// Node 4 has sometimes racing condition problems with babel-preset-env
-		this.timeout(5000);
-	}
+	it('should properly transform code', function () {
 
-	it('should properly transform code', function ( done ) {
-		runBabel('./fixtures/basic-options.input.js', {
-			presets: [
-				[
-					require.resolve('../'),
-					{
-						'preset-env': {
-							modules: 'commonjs'
+		return Promise.all([
+			runBabel('./fixtures/basic-options.input.js', {
+				presets: [
+					[
+						require.resolve('../'),
+						{
+							'@babel/preset-env': {
+								modules: 'commonjs'
+							}
 						}
-					}
+					]
 				]
-			]
-		}, function ( transformedCode ) {
-			assert.equal(transformedCode, getCodeFromFile('./fixtures/basic-options.output.js'));
-			done();
-		});
+			}),
+			getCodeFromFile('./fixtures/basic-options.output.js')
+		])
+			.then(([ transformedCode, fixture ]) => {
+				assert.equal(transformedCode, fixture);
+			});
+
 	});
 
 });
 
 describe('Next', function () {
 
-	it('should properly transform code', function ( done ) {
-		runBabel('./fixtures/next.input.js', {
-			presets: [require.resolve('../next')]
-		}, function ( transformedCode ) {
-			assert.equal(transformedCode, getCodeFromFile('./fixtures/next.output.js'));
-			done();
-		});
+	it('should properly transform code', function () {
+
+		return Promise.all([
+			runBabel('./fixtures/next.input.js', {
+				presets: [require.resolve('../next')]
+			}),
+			getCodeFromFile('./fixtures/next.output.js')
+		])
+			.then(([ transformedCode, fixture ]) => {
+				assert.equal(transformedCode, fixture);
+			});
+
 	});
 
 });
 
 describe('React', function () {
 
-	it('should properly transform code', function ( done ) {
-		runBabel('./fixtures/react.input.js', {
-			presets: [require.resolve('../react')]
-		}, function ( transformedCode ) {
-			assert.equal(transformedCode, getCodeFromFile('./fixtures/react.output.js'));
-			done();
-		});
+	it('should properly transform code', function () {
+
+		return Promise.all([
+			runBabel('./fixtures/react.input.js', {
+				presets: [require.resolve('../react')]
+			}),
+			getCodeFromFile('./fixtures/react.output.js')
+		])
+			.then(([ transformedCode, fixture ]) => {
+				assert.equal(transformedCode, fixture);
+			});
+
 	});
 
 });
 
 describe('Vue', function () {
 
-	it('should properly transform code', function ( done ) {
-		runBabel('./fixtures/vue.input.js', {
-			presets: [require.resolve('../vue')]
-		}, function ( transformedCode ) {
-			assert.equal(transformedCode, getCodeFromFile('./fixtures/vue.output.js'));
-			done();
-		});
+	it('should properly transform code', function () {
+
+		return Promise.all([
+			runBabel('./fixtures/vue.input.js', {
+				presets: [require.resolve('../vue')]
+			}),
+			getCodeFromFile('./fixtures/vue.output.js')
+		])
+			.then(([ transformedCode, fixture ]) => {
+				assert.equal(transformedCode, fixture);
+			});
+
 	});
 
 });

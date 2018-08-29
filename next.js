@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = {
-	plugins: [
-		['transform-object-rest-spread', {
-			useBuiltIns: true
-		}]
-	]
+module.exports = () => {
+	return {
+		plugins: [
+			'@babel/plugin-proposal-object-rest-spread'
+		]
+	};
 };

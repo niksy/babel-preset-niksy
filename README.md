@@ -47,11 +47,11 @@ You can pass additional options to default preset.
 }
 ```
 
-### `preset-env`
+### `@babel/preset-env`
 
 Type: `Object`
 
-Options for [`babel-preset-env`][babel-preset-env].
+Options for [`@babel/preset-env`][babel-preset-env].
 
 ## Presets
 
@@ -100,7 +100,7 @@ MIT © [Ivan Nikolić](http://ivannikolic.com)
 
 [ci]: https://travis-ci.org/niksy/babel-preset-niksy
 [ci-img]: https://travis-ci.org/niksy/babel-preset-niksy.svg?branch=master
-[babel]: https://new.babeljs.io/
-[babel-presets]: https://new.babeljs.io/docs/en/plugins.html#plugin-preset-ordering
+[babel]: https://babeljs.io/
+[babel-presets]: https://babeljs.io/docs/en/plugins.html#plugin-ordering
 [tc39-proposals]: https://github.com/tc39/proposals#active-proposals
-[babel-preset-env]: https://new.babeljs.io/docs/en/babel-preset-env.html#options
+[babel-preset-env]: https://babeljs.io/docs/en/babel-preset-env.html#options

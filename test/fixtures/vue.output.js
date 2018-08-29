@@ -1,3 +1,5 @@
 const jackie = h(Jackie, {
-  attrs: { casper: "casper" }
+  attrs: {
+    casper: "casper"
+  }
 });

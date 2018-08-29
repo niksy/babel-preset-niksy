@@ -2,8 +2,10 @@
 
 module.exports = ( context, passedOptions ) => {
 
+	const presetEnvKey = '@babel/preset-env';
+
 	const options = {
-		'preset-env': {
+		[presetEnvKey]: {
 			targets: {
 				node: '4',
 				browsers: [
@@ -11,28 +13,27 @@ module.exports = ( context, passedOptions ) => {
 					'ie >= 9'
 				]
 			},
-			loose: true,
 			modules: false
 		}
 	};
 
 	if (
 		typeof passedOptions !== 'undefined' &&
-		('preset-env' in passedOptions)
+		(presetEnvKey in passedOptions)
 	) {
-		options['preset-env'] = Object.assign({}, options['preset-env'], passedOptions['preset-env']);
+		options[presetEnvKey] = Object.assign({}, options[presetEnvKey], passedOptions[presetEnvKey]);
 	}
 
 	return {
 		presets: [
 			[
-				'env',
-				options['preset-env']
+				presetEnvKey,
+				options[presetEnvKey]
 			]
 		],
 		plugins: [
-			'transform-es3-member-expression-literals',
-			'transform-es3-property-literals'
+			'@babel/plugin-transform-member-expression-literals',
+			'@babel/plugin-transform-property-literals'
 		]
 	};
 

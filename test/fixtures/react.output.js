@@ -1,1 +1,3 @@
-const jackie = React.createElement(Jackie, { casper: "casper" });
+const jackie = React.createElement(Jackie, {
+  casper: "casper"
+});

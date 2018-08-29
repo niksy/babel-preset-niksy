@@ -1,8 +1,12 @@
 'use strict';
 
-module.exports = {
-	plugins: [
-		'syntax-jsx',
-		'transform-vue-jsx'
-	]
+module.exports = () => {
+	return {
+		presets: [
+			'babel-preset-vue'
+		],
+		plugins: [
+			'@babel/plugin-syntax-jsx'
+		]
+	};
 };
