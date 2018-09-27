@@ -6,13 +6,6 @@ module.exports = ( context, passedOptions ) => {
 
 	const options = {
 		[presetEnvKey]: {
-			targets: {
-				node: '4',
-				browsers: [
-					'last 2 versions',
-					'ie >= 9'
-				]
-			},
 			modules: false
 		}
 	};
