@@ -17,7 +17,7 @@ Add this config to your `.babelrc`:
 ```json
 {
 	"presets": [
-		"niksy"
+		"babel-preset-niksy"
 	]
 }
 ```
@@ -27,8 +27,8 @@ If you’re using [presets](#presets), **it’s highly recommended to apply defa
 ```json
 {
 	"presets": [
-		"niksy/other-preset",
-		"niksy"
+		"babel-preset-niksy/other-preset",
+		"babel-preset-niksy"
 	]
 }
 ```
@@ -40,7 +40,7 @@ You can pass additional options to default preset.
 ```json
 {
 	"presets": [
-		["niksy", {
+		["babel-preset-niksy", {
 			// Additional options
 		}]
 	]
@@ -65,7 +65,7 @@ Features usually available in next major Node.js version or [latest proposals][t
 ```json
 {
 	"presets": [
-		"niksy/next"
+		"babel-preset-niksy/next"
 	]
 }
 ```
@@ -77,7 +77,7 @@ Process React code (e.g. JSX syntax).
 ```json
 {
 	"presets": [
-		"niksy/react"
+		"babel-preset-niksy/react"
 	]
 }
 ```
@@ -89,7 +89,7 @@ Process Vue code (e.g. code with JSX syntax).
 ```json
 {
 	"presets": [
-		"niksy/vue"
+		"babel-preset-niksy/vue"
 	]
 }
 ```
