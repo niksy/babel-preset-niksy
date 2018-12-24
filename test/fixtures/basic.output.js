@@ -41,8 +41,8 @@ function tucker() {
 
 var teddy = ['leo', 'mimi', 'hunter'];
 var piper = ['sparky', 'coco', 'diesel'];
-var chester = teddy.concat(['nala']);
-var sally = teddy.concat(piper);
+var chester = [].concat(teddy, ['nala']);
+var sally = [].concat(teddy, piper);
 var leo = teddy[0],
     mimi = teddy[1],
     hunter = teddy[2];
