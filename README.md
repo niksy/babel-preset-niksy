@@ -1,3 +1,11 @@
+![Deprecated project](https://img.shields.io/badge/status-deprecated-red.svg)
+
+**This project is deprecated.**
+
+Use [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) instead.
+
+---
+
 # babel-preset-niksy
 
 [![Build Status][ci-img]][ci]
